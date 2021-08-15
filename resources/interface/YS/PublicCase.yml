@@ -1,7 +1,7 @@
 #####################################################################登录测试用例
 
 positive_logincase:
-    login_positive: {"username": "liyaoyao","password": "Lyy123456"}
+    login_positive: {"username": "","password": ""}
 
 
 
@@ -10,113 +10,7 @@ negative_logincase:
 
     login_nothing: {"username": "","password": ""}                      #用户名密码都为空
     login_withoutName: {"username": "","password": "Lyy123456"}        #不输入用户名
-    login_withoutPwd: {"username": "liyaoyao","password": ""}             #不输入密码
+    login_withoutPwd: {"username": "","password": ""}             #不输入密码
     login_negName: {"username": "Margot","password": "Lyy123456"}      #不存在的用户名
     login_negPwd: {"username": "liyaoyao" , "password": "1234568789"}         #错误密码
 
-
-
-#####################################################################远传表-用户、水表信息获取用例
-
-positive_getmetercodecase:
-    getmetercode_positive: {"meterCode": "0000000001"}
-
-negative_getmetercodecase:
-    getmetercode_stopMeter: {"meterCode": "0000000005"}               #报停水表
-    getmetercode_cancellationMeter: {"meterCode": "0000000008"}       #销户
-    getmetercode_negMeter: {"meterCode": "00000001652"}               #不存在水表
-
-
-#####################################################################远传表-用户编号获取充值记录用例
-
-positive_getchargelistcase:
-    getchargelist_positive: {"meterCode": "0000000001"}
-
-negative_getchargelistcase:
-    getchargelist_stopMeter: {"meterCode": "0000000005"}               #报停水表
-    getchargelist_cancellationMeter: {"meterCode": "0000000008"}       #销户
-    getchargelist_negMeter: {"meterCode": "00000001652"}               #不存在水表
-
-
-###################################################################根据开票记录ID刷新电子发票开具结果用例(id需造新数据)
-
-positive_reflushinvoicecase:
-    reflushinvoicecase_positive: { "invoiceId": "76aa4c5eee0d494fb31fe081ab12ce1f"}
-
-negative_reflushinvoicecase:
-    reflushinvoicecase_stopMeter: { "invoiceId": "76aa4c5eee0d494fb31fe081ab12ce1f"}               #已刷新发票
-    reflushinvoicecase_cancellationMeter: { "invoiceId": "76aa4c5eee0d494fb31fe081ab12ce1f"}       #冲红票据
-    reflushinvoicecase_negMeter: { "invoiceId": "76aa4c5eee0d494fb31fe081ab12ce1f"}                #不存在发票id
-
-
-
-###################################################################撤单测试用例
-
-positive_cancelordercase:
-    cancelordercase_positive: {
-            "cciId": "9335a7684ddc49eab04225e300d78628" }
-
-negative_cancelordercase:
-    cancelordercase_old: {                                                                    #不是最新的缴费记录
-          "cciId": "a912ef32b2cd420894bf5efad0d8876d"
-
-    }
-
-    cancelordercase_accountknot: {                                                           #已日结记录不可撤单
-          "cciId": "39581_76176"
-    }
-    cancelordercase_canceled: {                                                               #已撤单不可撤单
-          "cciId": "9335a7684ddc49eab04225e300d78628"
-    }
-
-##################################################################批量开票测试用例
-positive_batchinvoiceissuecase:
-    -batchinvoiceissuecase_positive:
-      {"cciBatch": "826749171393499136",
-       "clientCode": "0000000031"}
-
-
-negative_batchinvoiceissuecase:
-    -batchinvoiceissuecase_batched:                                              #已开票的缴费批次
-     {
-        "cciBatch": "826749171393499136",
-        "clientCode": "0000000031"
-     }
-
-    -batchinvoiceissuecase_restrictedday:                                       #限制日期内不可开票
-     {
-        "cciBatch": "827229910534852608",
-        "clientCode": "3110031901"
-     }
-
-    -batchinvoiceissuecase_inexistence:                                       #不存在的缴费批次
-     {
-        "cciBatch": "82722991053485260228",
-        "clientCode": "3110031901"
-     }
-
-###########################################################支付宝用户欠费查询
-positive_getalipayarrearscase:
-    getalipayarrears_positive:
-     {
-        "acctOrgNo": "60054",
-        "busiType": "11",
-        "queryType": "0",
-        "queryValue": "0000000906"
-     }
-
-negative_getalipayarrearscase:
-    getalipayarrears_negMeter:         #不存在用户
-     {
-        "acctOrgNo": "60054",
-        "busiType": "11",
-        "queryType": "0",
-        "queryValue": "00000009062"
-     }
-    getalipayarrears_cancellationMeter:    #参数为空
-     {
-        "acctOrgNo": "60054",
-        "busiType": "11",
-        "queryType": "0",
-        "queryValue": ""
-     }
