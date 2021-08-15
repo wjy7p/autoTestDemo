@@ -1,0 +1,48 @@
+{
+  "uid" : "53edb446c91c45ca",
+  "name" : "test_one",
+  "fullName" : "test_add#test_one",
+  "historyId" : "3f0ff189ad27acfadd4dccb4b555f157",
+  "time" : {
+    "start" : 1629031704651,
+    "stop" : 1629031704652,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_add"
+  }, {
+    "name" : "host",
+    "value" : "LAPTOP-RKEMAGAR"
+  }, {
+    "name" : "thread",
+    "value" : "7064-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_add"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "53edb446c91c45ca.json",
+  "parameterValues" : [ ]
+}

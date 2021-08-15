@@ -1,0 +1,81 @@
+[ {
+  "uid" : "13b343f54ea4d8cd",
+  "name" : "test_negalogin[login_negPwd]",
+  "time" : {
+    "start" : 1629035209019,
+    "stop" : 1629035211167,
+    "duration" : 2148
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "a16889ac7e224c27",
+  "name" : "test_negalogin[login_nothing]",
+  "time" : {
+    "start" : 1629035199952,
+    "stop" : 1629035202243,
+    "duration" : 2291
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "436b46bd3af78972",
+  "name" : "test_posilogin[login_positive]",
+  "time" : {
+    "start" : 1629035197428,
+    "stop" : 1629035199764,
+    "duration" : 2336
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "9abdd7eb04392534",
+  "name" : "test_one",
+  "time" : {
+    "start" : 1629035211177,
+    "stop" : 1629035211177,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d393d4899e3fbc4",
+  "name" : "test_two",
+  "time" : {
+    "start" : 1629035211179,
+    "stop" : 1629035211179,
+    "duration" : 0
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "6000aa5fb4684386",
+  "name" : "test_negalogin[login_negName]",
+  "time" : {
+    "start" : 1629035206826,
+    "stop" : 1629035209012,
+    "duration" : 2186
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "aeb69abaf7efccdf",
+  "name" : "test_negalogin[login_withoutPwd]",
+  "time" : {
+    "start" : 1629035204543,
+    "stop" : 1629035206813,
+    "duration" : 2270
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "358dd8830f843860",
+  "name" : "test_negalogin[login_withoutName]",
+  "time" : {
+    "start" : 1629035202253,
+    "stop" : 1629035204535,
+    "duration" : 2282
+  },
+  "status" : "broken",
+  "severity" : "normal"
+} ]
