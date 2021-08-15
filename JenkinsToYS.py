@@ -13,9 +13,9 @@ jenkins_info = sys.argv
 # job_name = jenkins_info[1]
 job_name = "job/site"
 # sys_name = jenkins_info[2]
-sys_name = "营业收费系统"
+sys_name = "测试"
 # dd_url = jenkins_info[3]
-dd_url = 'https://oapi.dingtalk.com/robot/send?access_token=ca45a2dc7d075ffd2dc4561f592ec977291dd2702e6b0e097d693813119343c0'
+dd_url = 'https://oapi.dingtalk.com/robot/send?access_token=??'
 
 
 jenkins_url = "http://10.10.15.170:30080/"
