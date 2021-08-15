@@ -19,7 +19,7 @@ class LoginPO(BaseObj):
         """
         url = "http://10.10.15.205:17000/auth/oauth/token"
         body = {"username": kwargs["username"], "password": kwargs["password"], "grant_type": "password"}
-        headers = {'Content-Type': 'application/x-www-form-urlencoded', 'Authorization': "Basic MjI5MTdkYjEyZWY0NTBkNWNjMDJiNTBjNWJiN2I2NTU6d3BnQDIwMjA="}
+        headers = {'Content-Type': 'application/x-www-form-urlencoded', 'Authorization': ""}
         try:
             response = self.do_post(url=url, params=body, headers=headers)
             return response
