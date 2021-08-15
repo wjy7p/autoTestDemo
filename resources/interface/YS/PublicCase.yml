@@ -9,8 +9,5 @@ negative_logincase:
 #    login_insensitive: {"username": "LIyaoyao","password": "Lyy123456"}    #用户名大小写敏感   (测试结果表明，并未对大小写敏感)
 
     login_nothing: {"username": "","password": ""}                      #用户名密码都为空
-    login_withoutName: {"username": "","password": "Lyy123456"}        #不输入用户名
-    login_withoutPwd: {"username": "","password": ""}             #不输入密码
-    login_negName: {"username": "Margot","password": "Lyy123456"}      #不存在的用户名
-    login_negPwd: {"username": "liyaoyao" , "password": "1234568789"}         #错误密码
+    login_withoutName: {"username": "","password": "123456"}        #不输入用户名
 
